@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project license plate detection</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/logo1.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                The vehicle <strong>license plate detection system</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Fully automated cahracter reading using an OCR</p>
+            <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>We have identified that there is a huge delay in the identification process of suspected/getaway vehicles in SriLanka.This has been a major issue in the process of serving the justice to the victims.So we have used our knowledge on<strong>image processing,IOT and python</strong> to come up with a solution.We have used a webcam to capture the image of the lisence plate.</p>
+            <img src="img/num_plate_detect.jpeg" alt="images of the cropped license plates" class="img">
+            <p>After capturing the image of the license plate filters such as <strong>grayscale,bilateral filter </strong>would act upon it to smooth the image.Then that smoothed image would be canny edged using libraries such as <strong>opencv</strong> then the programme would find contours and after that it will find the rectangular contour as the license plate is most probably going to be a rectangel the programme would crop the rectangular contour and it will be read using <strong> tesseract ocr.</strong></p>
+            <p>We have thought about the practicality of our solution and therefore we have used a <strong>raspberry pi 3</strong> micro-controller as the computational device for this project.So, In a real world scenario a petroling police car would take the pictures of the license plates of the vehicles it is passing by.Then the programme would read the cahracters inside the captured plate and the it would serch for that particular license plate in the <strong>wanted vehicles database</strong> and if there's any match it will immidiatly send an email to the nearest police station.To achieve the above functionalities we have use python libraries such as <strong>smtplib and sqlite.</strong> .As for the further development of the project it is optimal to use a real-time viedio feed to the programme instead of images as well as an object detection algorithm such as <strong>YOLO with pre-trained weights</strong> along side <strong>a raspberry pi 4</strong> micro-controller for better accuracy of the results.There are many real world scenarios that can use this system.Specially a parking garage can be fully automated using this sort of an algorithm.</p>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:dilshanlakruwan50@gmail.com" class="footer__link">dilshanlakruwan50@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://dribbble.com">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
